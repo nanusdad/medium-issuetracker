@@ -8,14 +8,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><i class="fa fa-bug"></i> IssueTracker</a>
+          <a class="navbar-brand" href="/"><i class="fa fa-list"></i> StudentHub</a>
       </div>
       <div class="collapse navbar-collapse" id="navigationbar">
         <ul class="nav navbar-nav navbar-right">
             <li>{{#linkTo route="home"}}<i class="fa fa-home"></i> Home{{/linkTo}}</li>
             {{#if currentUser}}
-              <li>{{#linkTo route="issuesList"}}<i class="fa fa-align-justify"></i> Issues{{/linkTo}}</li>
-              <li>{{#linkTo route="insertIssue"}}<i class="fa fa-plus"></i> New Issue{{/linkTo}}</li>
+              <li>{{#linkTo route="issuesList"}}<i class="fa fa-align-justify"></i> Students{{/linkTo}}</li>
+              <li>{{#linkTo route="insertIssue"}}<i class="fa fa-plus"></i> New Student{{/linkTo}}</li>
             {{/if}}
             <li><div class="nav navbar-nav navbar-right"> {{> loginButtons}}</div></li>
         </ul>
@@ -28,7 +28,7 @@
   <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
       <ul class="nav navbar-nav navbar-right">
-          <li>Built with Meteor</li>
+          <li>2018 &copy; CMC Vellore</li>
       </ul>
     </div>
   </nav>
