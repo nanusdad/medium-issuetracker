@@ -29,5 +29,20 @@ Template.IssuesList.helpers({
       return true;
     else
       return false;
+  },
+
+  genderMale: function() {
+    if (this.gender === 'male')
+      return true;
+    else
+      return false;
+  },
+
+  genderFemale: function() {
+    if (this.gender === 'female')
+      return true;
+    else
+      return false;
   }
+
 });

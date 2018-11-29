@@ -11,7 +11,7 @@ Router.route('/', {
   where: 'client'
 });
 
-Router.route('/insert_issue', {
+Router.route('/insert_student', {
   name: 'insertIssue',
   controller: 'IssuesController',
   action: 'insert',
@@ -19,14 +19,14 @@ Router.route('/insert_issue', {
 });
 
 
-Router.route('issues_list', {
+Router.route('students_list', {
   name: 'issuesList',
   controller: 'IssuesController',
   action: 'list',
   where: 'client'
 });
 
-Router.route('/issue/:_id', {
+Router.route('/student/:_id', {
   name: 'editIssue',
   controller: 'IssuesController',
   action: 'edit',
