@@ -1,0 +1,21 @@
+<template name="EditStudent">
+  <h1>Edit Student</h1>
+  {{#autoForm collection="Students" doc=this id="editStudentForm" type="update"}}
+    <fieldset>
+	<legend>Edit</legend>
+	<table class="table">
+	  <tr>
+           <td> {{> afQuickField name='admissionNo'}} </td>
+	   <td> {{> afQuickField name='batch'}} </td>
+          </tr>
+	  <tr>
+           <td> {{> afQuickField name='firstName'}} </td>
+	   <td> {{> afQuickField name='lastName'}} </td>
+          </tr>
+        </table>
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Update</button>
+  {{/autoForm}}
+  <hr>
+  {{> quickRemoveButton collection="Students" _id=this._id beforeRemove=beforeRemove class="btn btn-danger"}}
+</template>

@@ -1,6 +1,6 @@
-Issues = new Mongo.Collection('issues');
+Students = new Mongo.Collection('students');
 
-Issues.attachSchema(new SimpleSchema({
+Students.attachSchema(new SimpleSchema({
   admissionNo:{
     type: SimpleSchema.Integer,
     label: "Admission No.",
@@ -79,7 +79,7 @@ Issues.attachSchema(new SimpleSchema({
 }));
 
 if (Meteor.isServer) {
-  Issues.allow({
+  Students.allow({
     insert: function (userId, doc) {
       return userId;
     },

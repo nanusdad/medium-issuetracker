@@ -1,0 +1,51 @@
+<template name="IssuesList">
+  <h1>Students List</h1>
+  <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th>Admission No.</th>
+            <th>Batch</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Alt Phone</th>
+            <th>PIN Code</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {{#each issues}}
+            <tr>
+              <td>{{admissionNo}}</td>
+              <td>{{batch}}</td>
+              <td>{{firstName}}</td>
+              <td>{{lastName}}</td>
+              <td>
+                {{#if genderMale}}
+                  <span class="label label-primary">{{gender}} <i class="fa fa-male"></i></span>
+                {{/if}}
+
+                {{#if genderFemale}}
+                  <span class="label label-warning">{{gender}} <i class="fa fa-female"></i></span>
+                {{/if}}
+
+              </td>
+              <td>{{email}}</td>
+              <td>{{phoneNumber1}}</td>
+              <td>{{phoneNumber2}}</td>
+              <td>{{pincode}}</td>
+              <td>
+                {{#linkTo route='editIssue'}}
+                  <i class="fa fa-pencil-square-o"></i>
+                {{/linkTo}}
+              </td>
+            </tr>
+          {{/each}}
+
+        </tbody>
+      </table>
+
+</template>
